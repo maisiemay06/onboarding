@@ -25,9 +25,13 @@
 export default {
   name: "FirstName",
   emits: ["setFirstName"],
+
   methods: {
     handleFirstName(event) {
       let name = event.target.value;
+      if (name) {
+        this.btnDisabled = false;
+      }
       let capName = name.charAt(0).toUpperCase() + name.slice(1);
       this.$emit("setFirstName", capName);
     },
