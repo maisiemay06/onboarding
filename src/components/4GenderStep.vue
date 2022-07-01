@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: "FirstName",
+  name: "GenderStep",
   props: ["userFirstName"],
 };
 </script>

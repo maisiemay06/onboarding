@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "FirstName",
+  name: "LastName",
   props: ["userFirstName"],
   emits: ["setLastName"],
   methods: {

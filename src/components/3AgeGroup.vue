@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "FirstName",
+  name: "AgeGroup",
   props: ["userFirstName"],
 };
 </script>
