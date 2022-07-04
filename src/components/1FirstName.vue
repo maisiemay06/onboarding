@@ -1,7 +1,6 @@
 // Step 1
 
 <template>
-  <p class="text-[15px] mb-2">1 of 15</p>
   <h1 class="font-semibold text-2xl md:text-[40px] mb-10 md:mb-20">
     Firstly, what's your first name
   </h1>
