@@ -70,6 +70,8 @@ export default {
       this.goals.unshift(formatNewGoal);
       this.goalInput = "";
       //   mark as checked as soon as submitted??
+
+      //   let spacelessGoal = formatNewGoal.replace(/\s+/g, "-");
     },
   },
 };

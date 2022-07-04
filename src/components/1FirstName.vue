@@ -25,7 +25,6 @@
 export default {
   name: "FirstName",
   emits: ["setFirstName"],
-
   methods: {
     handleFirstName(event) {
       let name = event.target.value;

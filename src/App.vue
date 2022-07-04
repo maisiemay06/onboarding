@@ -8,8 +8,8 @@
       h-[100vh]
       text-base
       p-6
-      pt-44
-      md:p-20 md:pt-60
+      pt-32
+      md:p-20 md:pt-40
     "
     :class="
       onboardingStep === 5 ? 'bg-meeow-primary text-white' : 'white text-black'
@@ -46,44 +46,27 @@
       v-if="onboardingStep === 7"
       :userFirstName="userFirstName"
     ></interests-step>
-    <event-step
-      v-if="onboardingStep === 8"
-      :userFirstName="userFirstName"
-    ></event-step>
+    <event-step v-if="onboardingStep === 8"></event-step>
     <location-step
       v-if="onboardingStep === 9"
       :userFirstName="userFirstName"
     ></location-step>
-    <distance-step
-      v-if="onboardingStep === 10"
-      :userFirstName="userFirstName"
-    ></distance-step>
-    <job-description
+    <distance-step v-if="onboardingStep === 10"></distance-step>
+    <employment-status
       v-if="onboardingStep === 11"
       :userFirstName="userFirstName"
-    ></job-description>
-    <about-you
-      v-if="onboardingStep === 12"
-      :userFirstName="userFirstName"
-    ></about-you>
-    <about-business
-      v-if="onboardingStep === 13"
-      :userFirstName="userFirstName"
-    ></about-business>
-    <same-job
-      v-if="onboardingStep === 14"
-      :userFirstName="userFirstName"
-    ></same-job>
-    <language-step
-      v-if="onboardingStep === 15"
-      :userFirstName="userFirstName"
-    ></language-step>
+    ></employment-status>
+    <job-title v-if="onboardingStep === 12"></job-title>
+    <about-you v-if="onboardingStep === 13"></about-you>
+    <about-business v-if="onboardingStep === 14"></about-business>
+    <same-job v-if="onboardingStep === 15"></same-job>
+    <language-step v-if="onboardingStep === 16"></language-step>
     <profile-picture
-      v-if="onboardingStep === 16"
+      v-if="onboardingStep === 17"
       :userFirstName="userFirstName"
     ></profile-picture>
     <completed-onboarding
-      v-if="onboardingStep === 17"
+      v-if="onboardingStep === 18"
       :userFirstName="userFirstName"
     ></completed-onboarding>
 
@@ -95,7 +78,16 @@
     >
       Let's get started!
     </button>
-    <div v-else class="md:absolute md:bottom-28 mt-10 md:mt-0">
+    <div
+      v-else
+      class="
+        mt-10
+        pb-20
+        bg-white
+        w-4/5
+        md:absolute md:bottom-28 md:mt-0 md:pb-0
+      "
+    >
       <button
         class="button mr-3"
         :class="
@@ -136,7 +128,7 @@
     height="42.844"
     viewBox="0 0 238.425 42.844"
     class="
-      fixed
+      absolute
       top-12
       right-0
       h-5
@@ -174,13 +166,14 @@ import InterestsStep from "./components/7InterestsStep.vue";
 import EventStep from "./components/8EventStep.vue";
 import LocationStep from "./components/9LocationStep.vue";
 import DistanceStep from "./components/10DistanceStep.vue";
-import JobDescription from "./components/11JobDescription.vue";
-import AboutYou from "./components/12AboutYou.vue";
-import AboutBusiness from "./components/13AboutBusiness.vue";
-import SameJob from "./components/14SameJob.vue";
-import LanguageStep from "./components/15LanguageStep.vue";
-import ProfilePicture from "./components/16ProfilePicture.vue";
-import CompletedOnboarding from "./components/17CompletedOnboarding.vue";
+import EmploymentStatus from "./components/11EmploymentStatus.vue";
+import JobTitle from "./components/12JobTitle.vue";
+import AboutYou from "./components/13AboutYou.vue";
+import AboutBusiness from "./components/14AboutBusiness.vue";
+import SameJob from "./components/15SameJob.vue";
+import LanguageStep from "./components/16LanguageStep.vue";
+import ProfilePicture from "./components/17ProfilePicture.vue";
+import CompletedOnboarding from "./components/18CompletedOnboarding.vue";
 
 export default {
   name: "App",
@@ -196,7 +189,8 @@ export default {
     EventStep,
     LocationStep,
     DistanceStep,
-    JobDescription,
+    EmploymentStatus,
+    JobTitle,
     AboutYou,
     AboutBusiness,
     SameJob,
@@ -206,7 +200,7 @@ export default {
   },
   data() {
     return {
-      onboardingStep: 6,
+      onboardingStep: 15,
       userFirstName: "Maisie",
       userLastName: "",
     };
@@ -247,7 +241,7 @@ export default {
   background-color: #d8d8d8;
 }
 
-input:checked + label {
+input:checked + .radio-option {
   background-color: black;
   color: white;
 }

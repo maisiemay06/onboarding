@@ -40,35 +40,3 @@ export default {
 };
 </script>
 
-<style scoped>
-input:checked + label {
-  background-color: black;
-  color: white;
-}
-
-.option {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 7px;
-  font-size: 18px;
-  box-sizing: border-box;
-  height: 46px;
-  width: auto;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -4px;
-}
-.option:hover {
-  cursor: pointer;
-  border: 2px solid black;
-}
-
-@media only screen and (min-width: 768px) {
-  .option {
-    height: 51px;
-    width: 100px;
-  }
-}
-</style>
