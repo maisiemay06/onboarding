@@ -1,7 +1,6 @@
 // Step 5
 
 <template>
-  <p class="text-[15px] mb-2">5 of 15</p>
   <h1 class="font-semibold text-2xl md:text-[40px] mb-10">
     What's your primary goal at the moment, {{ userFirstName }}?
   </h1>

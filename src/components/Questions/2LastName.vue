@@ -1,7 +1,6 @@
 // Step 2
 
 <template>
-  <p class="text-[15px] mb-2">2 of 15</p>
   <h1 class="font-semibold text-2xl md:text-[40px] mb-10 md:mb-20">
     What's your last name, {{ userFirstName }}
   </h1>

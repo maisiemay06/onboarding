@@ -1,0 +1,8 @@
+MOBILE
+    welcome - remove buttons, put on timer
+    
+    aime - fix video position and size
+
+    goals - fix button position
+    interests - fix button position
+    employment status - fix button position

@@ -1,7 +1,6 @@
 // Step 3
 
 <template>
-  <p class="text-[15px] mb-2">3 of 15</p>
   <h1 class="font-semibold text-2xl md:text-[40px] mb-10">
     How long have you been on this planet, {{ userFirstName }}?
   </h1>
